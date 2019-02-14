@@ -1,0 +1,26 @@
+{
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/gmail.addons.execute",
+    "https://www.googleapis.com/auth/gmail.addons.current.message.metadata",
+    "https://www.googleapis.com/auth/script.external_request"
+  ],
+  "urlFetchWhitelist": [
+    "https://005d5076.ngrok.io/"
+  ],
+  "gmail": {
+    "name": "Gmail Demo",
+    "logoUrl": "https://www.gstatic.com/images/icons/material/system/1x/label_googblue_24dp.png",
+    "contextualTriggers": [{
+      "unconditional": {
+      },
+      "onTriggerFunction": "buildAddOn"
+    }],
+    "openLinkUrlPrefixes": [
+      "http://localhost:3000/",
+      "https://005d5076.ngrok.io/",
+      "https://mail.google.com/"
+    ],
+    "primaryColor": "#4285F4",
+    "secondaryColor": "#4285F4"
+  }
+}

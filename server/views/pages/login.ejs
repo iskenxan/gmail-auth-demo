@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="<%= clientId %>">
+</head>
+
+<body>
+    <div>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    </div>
+    <script>
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            var idToken = googleUser.getAuthResponse().id_token;
+            window.location.replace('<%= redirectUri %>?success=1&response_type=<% responseType %>&state=<%= state %>&code=' + idToken);
+        }
+    </script>
+</body>
+
+</html>
